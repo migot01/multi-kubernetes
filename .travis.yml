@@ -6,7 +6,7 @@ before_install:
   - docker build -t migot01/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run migot01/react-test -- --coverage
+  - docker run migot01/react-test npm test -- --coverage
 
 after_success:
   - docker build -t migot01/multi-client ./client 
