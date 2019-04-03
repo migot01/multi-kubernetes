@@ -15,7 +15,7 @@ after_success:
   - docker build -t migot01/multi-worker ./worker
 #log in to the docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-# take the images ands push them to docker hub.
+# take the images ands push them to docker hub
   - docker push migot01/multi-client
   - docker push migot01/multi-nginx
   - docker push migot01/multi-server
